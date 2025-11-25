@@ -14,10 +14,12 @@
 
 </div>
 
-![Interfaz del ChatBot](/images/chatbot-interface.png)
+<div align="center">
 
-*Interfaz moderna del ChatBot con procesamiento NLP en tiempo real*
----
+![Interfaz del ChatBot](./images/chatbot_interface.png)
+*Interfaz moderna del ChatBot mostrando el procesamiento NLP en tiempo real con respuestas contextuales*
+
+</div>
 
 ## 📖 Descripción
 
