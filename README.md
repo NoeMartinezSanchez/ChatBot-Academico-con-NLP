@@ -12,7 +12,7 @@
 
 [Características](#-características) • [Demo](#-demo) • [Instalación](#-instalación) • [Uso](#-uso) • [Estructura](#-estructura-del-proyecto)
 
-![ChatBot Interface](https://via.placeholder.com/800x400/667eea/ffffff?text=ChatBot+NLP+Avanzado+-+Interfaz+Moderna)
+![Interfaz del ChatBot](./images/chatbot-interface.png)
 
 *Interfaz moderna del ChatBot con procesamiento NLP en tiempo real*
 
