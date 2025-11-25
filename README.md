@@ -12,12 +12,11 @@
 
 [Características](#-características) • [Demo](#-demo) • [Instalación](#-instalación) • [Uso](#-uso) • [Estructura](#-estructura-del-proyecto)
 
-![Interfaz del ChatBot](./images/chatbot-interface.png)
-
-*Interfaz moderna del ChatBot con procesamiento NLP en tiempo real*
-
 </div>
 
+![Interfaz del ChatBot](/images/chatbot-interface.png)
+
+*Interfaz moderna del ChatBot con procesamiento NLP en tiempo real*
 ---
 
 ## 📖 Descripción
