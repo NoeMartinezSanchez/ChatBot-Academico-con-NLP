@@ -1,0 +1,181 @@
+{
+  "intents": [
+    {
+      "tag": "saludo",
+      "patterns": [
+        "hola", "buenos días", "buenas tardes", "buenas noches",
+        "hi", "hey", "qué tal", "saludos", "cómo estás",
+        "hola buenas", "hey hola", "buen día", "saludos cordiales"
+      ],
+      "responses": [
+        "¡Hola! 👋 Soy tu asistente especializado en el Módulo Propedéutico. ¿En qué puedo ayudarte hoy?",
+        "¡Buen día! 🎓 Estoy aquí para orientarte con el módulo propedéutico. ¿Qué te gustaría saber?",
+        "¡Hola! 🤗 Bienvenido al asistente inteligente del módulo propedéutico. ¿En qué puedo apoyarte?"
+      ],
+      "context": "welcome"
+    },
+    {
+      "tag": "despedida",
+      "patterns": [
+        "adiós", "hasta luego", "nos vemos", "chao", "bye",
+        "hasta pronto", "gracias por la ayuda", "me voy", "terminamos"
+      ],
+      "responses": [
+        "¡Hasta luego! 🚀 Recuerda que estoy aquí para ayudarte cuando lo necesites.",
+        "¡Nos vemos! 💫 Éxito en tu módulo propedéutico.",
+        "¡Chao! 📚 No dudes en volver si tienes más preguntas."
+      ],
+      "context": "goodbye"
+    },
+    {
+      "tag": "modulo_info",
+      "patterns": [
+        "qué es el módulo propedéutico", "información del módulo", "hablame del propedéutico",
+        "qué es propedéutico", "para qué sirve el módulo", "objetivos del módulo",
+        "qué aprenderé en el propedéutico", "en qué consiste el módulo",
+        "cuál es el propósito del módulo propedéutico", "qué me ofrece el propedéutico",
+        "dime del módulo", "habla del propedéutico"
+      ],
+      "responses": [
+        "📖 **Módulo Propedéutico**: Es tu preparación inicial de 4 semanas diseñada para:\n\n• 🎯 Desarrollar habilidades de estudio efectivas\n• 💻 Familiarizarte con la plataforma educativa\n• ⏰ Mejorar tu organización del tiempo\n• 💬 Practicar comunicación académica en línea\n\nEs tu puerta de entrada al éxito en Prepa en Línea SEP.",
+        "🎓 **El módulo propedéutico** es un programa de 4 semanas que te prepara para:\n\n• Fortalecer técnicas de aprendizaje\n• Dominar el uso de la plataforma virtual\n• Gestionar eficientemente tu tiempo\n• Desarrollar competencias digitales\n\n¡Es tu base para un excelente desempeño académico!"
+      ],
+      "context": "academic"
+    },
+    {
+      "tag": "duracion_modulo",
+      "patterns": [
+        "cuánto dura el módulo", "duración del propedéutico", "cuántas semanas",
+        "tiempo del módulo", "cuándo termina", "cuándo empieza",
+        "cuánto tiempo dura", "duracción"
+      ],
+      "responses": [
+        "⏱️ **Duración**: El módulo propedéutico tiene una duración de 4 semanas intensivas.",
+        "📅 **Tiempo**: Son 4 semanas de preparación antes de iniciar formalmente la prepa en línea."
+      ],
+      "context": "academic"
+    },
+    {
+      "tag": "evaluacion",
+      "patterns": [
+        "cómo son las evaluaciones", "sistema de evaluación", "criterios de evaluación", 
+        "cómo me evalúan", "qué necesito para aprobar", "calificación del módulo",
+        "porcentajes de evaluación", "cómo es el sistema de evaluacion", "cómo se evalúa",
+        "requisitos para aprobar", "qué calificación necesito", "cómo califican",
+        "eval", "calif", "nota", "aprob", "exam", "qué piden para pasar"
+      ],
+      "responses": [
+        "📊 **Sistema de Evaluación**:\n\n• **Foros (30%)**: Participación activa y calidad en discusiones\n• **Actividades (40%)**: Tareas prácticas y ejercicios\n• **Proyecto final (30%)**: Integración de todos los aprendizajes\n\n**Para aprobar necesitas**:\n✅ Calificación mínima: 8.0/10\n✅ 80% de participación en foros\n\n¡La constancia es clave para el éxito! 🎯",
+        "🎯 **Criterios de Evaluación**:\n\n**Distribución de puntajes**:\n- 30% Participación en foros\n- 40% Actividades prácticas  \n- 30% Proyecto final integrador\n\n**Requisitos de aprobación**:\n• Calificación final ≥ 8.0\n• 80% de asistencia en foros\n• Entrega de todas las actividades\n\n¿Te queda claro algún punto específico?"
+      ],
+      "context": "academic"
+    },
+    {
+      "tag": "plataforma_acceso",
+      "patterns": [
+        "cómo accedo a la plataforma", "cómo es el acceso a la plataforma", 
+        "entrar a la plataforma", "login plataforma", "acceso virtual",
+        "dónde ingreso", "cómo entrar al sistema", "acceder a la plataforma virtual",
+        "registro en plataforma", "tengo dudas sobre el registro", "cómo me registro",
+        "plat", "acceso", "entrar", "login", "registro", "ingresar",
+        "cómo inicio sesión", "dónde me registro"
+      ],
+      "responses": [
+        "💻 **Acceso a la Plataforma**:\n\n**Pasos para ingresar**:\n1. Ve al portal oficial de Prepa en Línea SEP\n2. Ingresa tu **matrícula** como usuario\n3. Escribe tu **contraseña** proporcionada\n4. Haz clic en 'Entrar'\n\n**Soporte técnico**:\n📧 Email: soporte@prepaenlinea.sep.gob.mx\n\n¿Problemas de acceso? Contacta a soporte con tu matrícula.",
+        "🔑 **Para Acceder a la Plataforma**:\n\n• **URL**: Portal oficial de Prepa en Línea SEP\n• **Usuario**: Tu número de matrícula\n• **Contraseña**: La que te asignaron al inscribirte\n\n**Si tienes problemas**:\n• Verifica tu matrícula y contraseña\n• Contacta a: soporte@prepaenlinea.sep.gob.mx\n• Proporciona tu matrícula completa"
+      ],
+      "context": "platform"
+    },
+    {
+      "tag": "soporte_tecnico",
+      "patterns": [
+        "soporte técnico", "problemas con la plataforma", "no puedo entrar",
+        "error de acceso", "olvidé mi contraseña", "ayuda técnica",
+        "no me deja acceder", "problema técnico", "falla la plataforma"
+      ],
+      "responses": [
+        "🛠️ **Soporte Técnico**:\n\n• **Email**: soporte@prepaenlinea.sep.gob.mx\n• **Problemas comunes**: Acceso, navegación, entrega de actividades\n• **Informa**: Tu matrícula y descripción detallada del problema",
+        "📞 **Contacto Soporte**:\n\n**Email oficial**: soporte@prepaenlinea.sep.gob.mx\n\n**Incluye en tu mensaje**:\n• Tu matrícula completa\n• Descripción del problema\n• Pantallazos (si es posible)\n• Navegador que usas"
+      ],
+      "context": "platform"
+    },
+    {
+      "tag": "tecnicas_estudio_basicas",
+      "patterns": [
+        "técnicas de estudio", "métodos de estudio", "cómo estudiar mejor", 
+        "consejos para estudiar", "aprender a aprender", "estudio efectivo",
+        "cómo estudiar eficazmente", "técnicas para estudiar",
+        "técnica", "estudio", "estudiar", "método", "aprender"
+      ],
+      "responses": [
+        "📝 **Técnicas de Estudio Efectivas**:\n\n• 🍅 **Pomodoro**: 25min estudio + 5min descanso\n• 🧠 **Mapas mentales**: Organización visual\n• 📋 **Resúmenes**: Sintetizar información clave\n• ⏰ **Repaso espaciado**: Intervalos crecientes\n• 🎯 **Estudio activo**: Preguntas y aplicación\n\n¿Te interesa profundizar en alguna técnica específica?",
+        "🎓 **Métodos Comprobados**:\n\n1. **Estudio distribuido** (mejor que intensivo)\n2. **Práctica de recuperación** (sin ver apuntes)\n3. **Enseñar a otros** (método Feynman)\n4. **Conexiones con conocimiento previo**\n5. **Aplicación práctica inmediata**\n\n¡La ciencia respalda estas estrategias! 🔬"
+      ],
+      "context": "study_techniques"
+    },
+    {
+      "tag": "tecnicas_estudio_avanzadas",
+      "patterns": [
+        "técnicas de estudio avanzadas", "métodos de aprendizaje efectivo",
+        "cómo estudiar de manera eficiente", "estrategias de estudio comprobadas",
+        "técnicas para mejorar el aprendizaje", "cómo retener mejor la información",
+        "métodos de estudio científicos", "aprendizaje efectivo"
+      ],
+      "responses": [
+        "🧠 **Técnicas de Estudio Avanzadas**:\n\n• **🍅 Pomodoro**: 25min estudio + 5min descanso\n• **🎨 Mapas Mentales**: Organización visual de ideas\n• **📝 Feynman**: Explicar como si enseñaras\n• **🔄 Repaso Espaciado**: Intervalos crecientes\n• **🎯 Estudio Activo**: Preguntas y aplicación\n\n¿Te interesa profundizar en alguna técnica específica?",
+        "🚀 **Estrategias Comprobadas**:\n\n1. **Estudio Distribuido** vs. intensivo\n2. **Práctica de Recuperación** (sin ver apuntes)\n3. **Explicación a Otros** (método Feynman)\n4. **Conexiones con Conocimiento Previo**\n5. **Aplicación Práctica** inmediata\n\nLa ciencia del aprendizaje recomienda estas aproximaciones."
+      ],
+      "context": "study_advanced"
+    },
+    {
+      "tag": "tecnica_pomodoro",
+      "patterns": [
+        "técnica pomodoro", "pomodoro", "estudiar 25 minutos", "método pomodoro",
+        "cómo funciona pomodoro", "qué es pomodoro", "técnica del tomate"
+      ],
+      "responses": [
+        "🍅 **Técnica Pomodoro**:\n\n1. ⏰ Estudia 25 minutos concentrado\n2. ☕ Descansa 5 minutos\n3. 🔄 Repite 4 veces\n4. 🏖️ Toma descanso largo (15-30 min)\n\n**Beneficios**: Enfoca tu atención, evita el agotamiento y mejora la productividad.",
+        "⏲️ **Pomodoro Paso a Paso**:\n\n• Elige una tarea\n• Pon temporizador 25 min\n• Trabaja sin distracciones\n• Descansa 5 min\n• Después de 4 pomodoros, descansa 15-30 min\n\n¡Es ideal para mantener la concentración!"
+      ],
+      "context": "study_techniques"
+    },
+    {
+      "tag": "mapas_mentales",
+      "patterns": [
+        "mapas mentales", "cómo hacer mapas mentales", "organización visual",
+        "diagramas de ideas", "mapa conceptual", "organizar ideas visualmente"
+      ],
+      "responses": [
+        "🧠 **Mapas Mentales**:\n\n• **Centro**: Idea principal\n• **Ramas**: Conceptos relacionados\n• **Palabras clave**: Una por línea\n• **Colores**: Diferentes por categoría\n• **Imágenes**: Ayudan a la memoria\n\n**Ventaja**: Visualizas conexiones entre conceptos complejos.",
+        "🎨 **Crear Mapas Mentales**:\n\n1. Empieza con el concepto central\n2. Agrega ramas principales\n3. Desarrolla sub-ramas\n4. Usa colores e imágenes\n5. Manténlo simple y claro\n\n¡Perfecto para resumir temas extensos!"
+      ],
+      "context": "study_techniques"
+    },
+    {
+      "tag": "organizacion_tiempo",
+      "patterns": [
+        "cómo organizar mi tiempo", "horario de estudio", "gestión del tiempo",
+        "planificación semanal", "cuánto tiempo dedicar", "organización del tiempo",
+        "cómo planificar", "gestión del tiempo estudio"
+      ],
+      "responses": [
+        "⏳ **Organización del Tiempo**:\n\n• **Dedicación**: Mínimo 2 horas diarias\n• **Rutina**: Mismo horario cada día\n• **Planificación**: Domingo planifica tu semana\n• **Metas**: Objetivos específicos por sesión",
+        "📅 **Planificación Efectiva**:\n\n1. **Horario fijo**: 2 horas diarias mínimo\n2. **Agenda**: Digital o física\n3. **Metas SMART**: Específicas, medibles\n4. **Descansos**: Incluye pausas activas\n\n¡La consistencia beats la intensidad!"
+      ],
+      "context": "organization"
+    },
+    {
+      "tag": "foros_participacion",
+      "patterns": [
+        "cómo participar en foros", "foros de discusión", "qué escribir en foros",
+        "importancia de foros", "evaluación de foros", "participación en foros",
+        "cómo contribuir en foros"
+      ],
+      "responses": [
+        "💬 **Participación en Foros**:\n\n• **Frecuencia**: Participa regularmente\n• **Calidad**: Argumentos fundamentados\n• **Interacción**: Responde a compañeros\n• **Respeto**: Ambiente colaborativo\n\n**Valor**: 30% de tu calificación final.",
+        "🗣️ **Foros Académicos**:\n\n**Recomendaciones**:\n• Lee las instrucciones cuidadosamente\n• Fundamenta tus opiniones\n• Cita fuentes cuando sea necesario\n• Responde constructivamente\n• Mantén el respeto siempre\n\n¡Son espacios de aprendizaje colaborativo!"
+      ],
+      "context": "platform"
+    }
+  ]
+}
