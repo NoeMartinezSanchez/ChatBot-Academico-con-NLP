@@ -135,6 +135,207 @@
   ],
   "context": "registro_proceso"
 },
+
+{
+  "tag": "calificacion_minima_aprobar",
+  "patterns": [
+    "¿Con cuánto de calificación se pasa el propedéutico?",
+    "cuál es el mínimo para aprobar",
+    "calificación mínima para pasar el módulo",
+    "¿Es suficiente con 60 para pasar el propedéutico?",
+    "¿Si saco 60% ya entro a la prepa?",
+    "con 60 ya la armo?",
+    "con cuanto es el pase",
+    "cuánto es lo menos que puedo sacar",
+    "el 60 es para aprobar o para ser aceptado",
+    "si paso con 70% me aceptan?",
+    "el propedéutico se pasa con 60?",
+    "que pasa si no saco 90",
+    "mínimo para quedar",
+    "es verdad que con menos de 80 no quedas",
+    "necesito 100 para aprobar"
+  ],
+  "responses": [
+    "La calificación **mínima** para **aprobar** el Módulo Propedéutico es de **60 puntos** o 60% [1], [2], [3], [4].",
+    "Sin embargo, el propedéutico sirve como un examen de admisión y solo selecciona a los aspirantes con las **calificaciones más altas** para el Módulo 1 [3], [5], [6].",
+    "Aprobar con 60% no garantiza que seas seleccionado [3], [6]. Se recomienda obtener un promedio **arriba de 90%** para tener altas probabilidades de asegurar un lugar [7], [8], [9], [10]." ,
+    "Si tu calificación es baja (menos de 80%), es probable que debas esperar la siguiente convocatoria para volver a intentarlo y mejorar tu puntaje, ya que solo se quedan los 'mejores promedios' [2], [8], [11], [12]."
+  ],
+  "context": "calificacion"
+},
+
+{
+  "tag": "consejos_exito_propedéutico",
+  "patterns": [
+    "qué tengo que hacer para sacar buena calificación",
+    "tips para pasar el propedeutico",
+    "consejos para que me vaya bien en el módulo inicial",
+    "lo más importante para el propedéutico",
+    "que recomiendan para no reprobar",
+    "ayuda con tips",
+    "cómo me aseguro un 100",
+    "que me aconsejan para el módulo 0",
+    "cual es la clave para pasar el propedéutico",
+    "que debo estudiar para el propedéutico",
+    "que me recomiendan hacer primero en la semana 1",
+    "guía para tener éxito en el curso",
+    "lo mas dificil es el propedeutico?",
+    "cómo evitar el plagio",
+    "hay algún secreto para sacar 100",
+    "necesito motivación para estudiar",
+    "qué hace a un buen estudiante en prepa en línea"
+  ],
+  "responses": [
+    "La clave del éxito en el propedéutico (y en módulos futuros) es la **lectura y la organización** [1-5].",
+    "Debes **leer absolutamente todos los recursos** de la plataforma y las instrucciones de cada actividad, incluso varias veces para asegurar una buena **comprensión lectora** [2, 4, 6-10].",
+    "El consejo más importante es **seguir la Rúbrica al pie de la letra**; concéntrate en cumplir todos los aspectos de la columna de **Experto** para maximizar tu puntaje [6, 11-15].",
+    "Es vital que te **conectes o veas las grabaciones de las sesiones síncronas** (Espacios Abiertos para el Aprendizaje) con tu Asesor Virtual, ya que explican las actividades y puedes obtener **puntos extra** por participar [8, 16-19].",
+    "**Practica la citación y referenciación (formato APA)** desde ahora, pues las faltas de ortografía y el no citar correctamente son motivos de baja calificación y plagio [7, 13, 20-23].",
+    "Organiza tu tiempo para entregar tus actividades **antes del domingo** para evitar saturación de la plataforma [9, 14, 24, 25]."
+  ],
+  "context": "exito_academico"
+},
+
+{
+  "tag": "dificultad_propedéutico",
+  "patterns": [
+    "¿Es difícil el propedéutico o la prepa en línea?",
+    "¿Qué tan difícil es Prepa en Línea?",
+    "¿Es muy complicado el módulo inicial?",
+    "¿Me costará trabajo el propedéutico si tengo años sin estudiar?",
+    "La prepa en línea es fácil o no?",
+    "Se me hace difícil el propedéutico que hago?",
+    "¿Es muy laborioso?",
+    "¿El módulo 0 es complicado?",
+    "El propedéutico es regalado?",
+    "Tengo miedo de que sea muy difícil",
+    "¿Me voy a estresar mucho?",
+    "Se necesita mucha dedicación o es fácil",
+    "¿Es el módulo más fácil de todos?",
+    "¿Qué tan difícil se pone la prepa?"
+  ],
+  "responses": [
+    "El Módulo Propedéutico es considerado por muchos egresados como **'lo más fácil'** de toda la Prepa en Línea SEP, porque su objetivo principal es que te familiarices con el modelo educativo y el manejo de la plataforma [1-5].",
+    "Generalmente, el propedéutico se centra en **aprender a usar la plataforma** y el manejo básico de herramientas ofimáticas (Word, Excel, PowerPoint) [6-10].",
+    "La dificultad no suele ser académica, sino que puede ser **laborioso** [9, 11] o complicado si no estás familiarizado con la tecnología o llevas mucho tiempo sin estudiar [12-15].",
+    "El consejo principal es **leer bien las instrucciones** y **apegarse a la Rúbrica** de evaluación, ya que al principio muchos se confunden por no leer o no comprender [7, 11, 16, 17].",
+    "Los estudiantes experimentados advierten que si el propedéutico te resulta muy complicado, los módulos subsecuentes (especialmente a partir del Módulo 11) aumentarán el nivel de complejidad [18-21]."
+  ],
+  "context": "dificultad"
+},
+
+{
+  "tag": "inicio_convocatoria_modulo",
+  "patterns": [
+    "¿Cuándo empieza la siguiente convocatoria?",
+    "¿Ya salieron las fechas para el propedéutico?",
+    "¿Cuándo me toca empezar el módulo 1?",
+    "¿Saben cuándo inicia la próxima generación?",
+    "¿Cuánto falta para que inicie mi módulo 1?",
+    "¿Cuándo puedo volver a inscribirme?",
+    "¿La convocatoria está abierta?",
+    "¿Qué día empezamos el propedéutico?",
+    "¿Cómo me entero de las fechas de la siguiente convocatoria?",
+    "Ya pasó la convocatoria?",
+    "Quiero inscribirme ya, qué hago?",
+    "¿Cuando se abre la nueva plataforma?",
+    "¿El módulo 1 empieza luego luego?",
+    "Necesito saber las fechas de inscripción.",
+    "¿Cuándo inicia el propedéutico para los nuevos?"
+  ],
+  "responses": [
+    "Si eres aspirante y aún no has iniciado, debes estar pendiente de las próximas **convocatorias** en el portal oficial de Prepa en Línea SEP [1, 2]. Ahí se anuncian las fechas de registro e inicio del propedéutico.",
+    "Si ya aprobaste el propedéutico y esperas el Módulo 1, generalmente hay **una semana de descanso** después de que finaliza el módulo inicial [3, 4].",
+    "Los módulos y las semanas de estudio comienzan siempre los **días lunes** [4-8].",
+    "Es crucial que revises la **guía de registro de tu generación** para conocer las fechas específicas de cuándo empieza tu Módulo 1, pues a veces la información llega al correo o está publicada directamente en la plataforma [2, 9, 10]."
+  ],
+  "context": "fechas_inicio"
+},
+
+{
+  "tag": "reprobacion_baja_calificacion",
+  "patterns": [
+    "¿Qué pasa si no apruebo el propedéutico?",
+    "¿Si mi calificación es baja puedo entrar al Módulo 1?",
+    "¿Con 70 o 80 me quedo?",
+    "si no fui seleccionado, ¿qué sigue?",
+    "saqué 79 y no quedé, ¿por qué?",
+    "tengo que volver a hacer el propedéutico si no quedé?",
+    "¿Cuántas veces puedo intentar pasar el propedéutico?",
+    "si mi calificación es menor a 90, ¿pierdo mi lugar?",
+    "¿Me van a funar por no pasar el propedéutico?",
+    "tengo otra oportunidad si repruebo el módulo 0"
+  ],
+  "responses": [
+    "Si tu calificación es baja (generalmente debajo de 90%), es probable que **no seas seleccionado** para el Módulo 1, aunque hayas aprobado el módulo con el mínimo de 60% [1-6].",
+    "Esto sucede porque el propedéutico funciona como un examen de admisión, y solo los aspirantes con las **mejores calificaciones** (promedios de 90% o más) son aceptados debido al cupo limitado de lugares [1-3, 5, 7-9].",
+    "Si no eres seleccionado en esta ocasión, debes esperar la **siguiente convocatoria** para volver a intentarlo y así mejorar tu puntaje, ya que tendrás la experiencia del primer intento [1, 4, 8, 10-15].",
+    "Los aspirantes con calificaciones de 80% o menos en el propedéutico han reportado no haber sido aceptados, aunque el puntaje aprobatorio es 60% [1, 3, 5, 10].",
+    "Aprovecha esta experiencia para **estar más preparado** en el próximo intento, sabiendo de qué trata el módulo [8, 14, 16]."
+  ],
+  "context": "calificacion"
+},
+
+{
+  "tag": "sesiones_sincronas_puntos",
+  "patterns": [
+    "¿Dónde encuentro las sesiones síncronas con el asesor?",
+    "¿Las clases en vivo son obligatorias?",
+    "¿Cuándo son las sesiones de mi asesor virtual?",
+    "¿Las sesiones dan puntos extra?",
+    "¿Cómo veo las sesiones grabadas si no pude asistir?",
+    "¿Dónde reviso los horarios de las videollamadas?",
+    "¿Cuánto vale la asistencia a las sesiones?",
+    "¿Dá puntos extra mi asesor por entrar al Zoom?",
+    "¿Hay que participar en la sesión para que cuenten los puntos?",
+    "¿Cómo se que mi asesor ya me puso los puntos extras?",
+    "¿Dónde está la Pizarra de Sesiones?",
+    "¿Las sesiones de mi asesor son todos los días?",
+    "¿Con qué frecuencia hay sesiones síncronas?",
+    "¿Dónde se publican las ligas de las sesiones?",
+    "¿Dan puntos por cada sesión que asisto?",
+    "¿Cada sesión vale 1.25 puntos?",
+    "¿Si no entro, me bajan calificación?",
+    "¿Puedo ver las sesiones en YouTube?"
+  ],
+  "responses": [
+    "Las sesiones virtuales (llamadas Espacios Abiertos para el Aprendizaje) no son obligatorias, pero son muy recomendables y te otorgan **puntos extra** por participar [1-3].",
+    "Generalmente, se realizan **dos sesiones por semana** con tu Asesor Virtual [4]. La participación activa en estas sesiones puede sumar hasta **10 puntos extra** a tu calificación total del módulo (1.25 puntos por sesión) [3, 5].",
+    "Para encontrar los horarios y las ligas de acceso, debes revisar la sección **Pizarra de Sesiones** (o 'Avisos') en la plataforma [6-8]. El asesor elige el horario, a menudo basándose en una encuesta [6, 9].",
+    "Si no puedes asistir en el horario establecido, no te preocupes. **Las sesiones quedan grabadas** y se suben a la plataforma o a YouTube para que las consultes más tarde, pero solo la asistencia y participación en vivo otorgan los puntos extras [1, 7]."
+  ],
+  "context": "sesiones_ayuda"
+},
+
+{
+  "tag": "problemas_ingreso_plataforma",
+  "patterns": [
+    "no puedo ingresar al propedéutico",
+    "mi usuario y contraseña son incorrectos",
+    "me sale sin asignacion de módulo",
+    "no puedo acceder a mi aula",
+    "el link no me deja entrar",
+    "dónde está mi usuario y contraseña",
+    "me dice que la curp no es válida",
+    "la página se encuentra en mantenimiento",
+    "no me ha llegado el correo de confirmacion",
+    "no puedo entrar al campus",
+    "me marca error al querer entrar",
+    "donde me envían el ID y la contraseña",
+    "no me acepta mi clave",
+    "a mi me sale que no tengo modulo asignado",
+    "pensé que solo era yo la de ese problema",
+    "puro error me sale la página hoy"
+  ],
+  "responses": [
+    "Si tienes problemas para ingresar, primero asegúrate de que estás ingresando al **apartado correcto**; para el curso propedéutico, debes entrar donde dice 'Propedéutico', no donde dice 'alumnos y maestros', ya que aún eres aspirante y no alumno [1, 2].",
+    "Un error común es **escribir manualmente** el usuario y la contraseña. Te recomendamos enfáticamente **copiar y pegar** tu usuario y contraseña directamente desde el correo electrónico que te enviaron [2-6].",
+    "Si el correo con tu usuario y contraseña no te ha llegado, revisa tu **bandeja de correo no deseado (spam)** [5, 7, 8].",
+    "Ten en cuenta que la plataforma entra en **mantenimiento, generalmente los días miércoles** [1, 2]. A veces esto dura solo unas horas, por lo que debes tomar precauciones y planificar tus actividades [1, 2].",
+    "Si te aparece la leyenda 'sin asignación de módulo' después de aprobar el propedéutico, puede significar que **no fuiste seleccionado** en ese momento, ya que solo ingresan los promedios más altos [9-14]."
+  ],
+  "context": "acceso_plataforma"
+},
     {
       "tag": "modulo_info",
       "patterns": [
@@ -149,155 +350,6 @@
         "🎓 **El módulo propedéutico** es un programa de 4 semanas que te prepara para:\n\n• Fortalecer técnicas de aprendizaje\n• Dominar el uso de la plataforma virtual\n• Gestionar eficientemente tu tiempo\n• Desarrollar competencias digitales\n\n¡Es tu base para un excelente desempeño académico!"
       ],
       "context": "academic"
-    },
-    {
-      "tag": "duracion_modulo",
-      "patterns": [
-        "cuánto dura el módulo", "duración del propedéutico", "cuántas semanas",
-        "tiempo del módulo", "cuándo termina", "cuándo empieza",
-        "cuánto tiempo dura", "duracción"
-      ],
-      "responses": [
-        "⏱️ **Duración**: El módulo propedéutico tiene una duración de 4 semanas intensivas.",
-        "📅 **Tiempo**: Son 4 semanas de preparación antes de iniciar formalmente la prepa en línea."
-      ],
-      "context": "academic"
-    },
-    {
-      "tag": "evaluacion",
-      "patterns": [
-        "cómo será la evaluación", "de qué manera evalúan", 
-        "cuáles son los criterios para aprobar", "qué porcentaje vale cada actividad",
-        "cómo califican las tareas", "qué necesito para pasar el módulo",
-        "hay examen final", "hay pruebas escritas", "cómo se asigna la calificación",
-        "qué pasa si repruebo", "puedo recuperar puntos", "hay segunda oportunidad",
-        "la evaluación es difícil", "cómo es el proceso de calificación",
-        "qué tanto vale cada parte", "cuántos puntos necesito",
-        "la nota mínima es ocho", "cómo funciona el sistema de puntos",
-        "hay evaluación continua", "cómo miden el aprendizaje"
-      ],
-      "responses": [
-        "📊 **Sistema de Evaluación**:\n\n• **Foros (30%)**: Participación activa y calidad en discusiones\n• **Actividades (40%)**: Tareas prácticas y ejercicios\n• **Proyecto final (30%)**: Integración de todos los aprendizajes\n\n**Para aprobar necesitas**:\n✅ Calificación mínima: 8.0/10\n✅ 80% de participación en foros\n\n¡La constancia es clave para el éxito! 🎯",
-        "🎯 **Criterios de Evaluación**:\n\n**Distribución de puntajes**:\n- 30% Participación en foros\n- 40% Actividades prácticas  \n- 30% Proyecto final integrador\n\n**Requisitos de aprobación**:\n• Calificación final ≥ 8.0\n• 80% de asistencia en foros\n• Entrega de todas las actividades\n\n¿Te queda claro algún punto específico?"
-      ],
-      "context": "academic"
-    },
-    {
-      "tag": "plataforma_acceso",
-      "patterns": [
-        "no puedo entrar a la plataforma", "me dice error al acceder",
-        "olvidé mi usuario y contraseña", "dónde consigo mis credenciales",
-        "la plataforma no me deja ingresar", "qué hago si no puedo acceder",
-        "problemas para iniciar sesión", "mi contraseña no funciona",
-        "dónde está el botón de entrar", "qué página debo visitar",
-        "la plataforma está caída", "no carga la página de acceso",
-        "me pide código de seguridad", "dónde encuentro el enlace",
-        "tengo problemas técnicos para entrar", "la plataforma me bloquea",
-        "dónde reporto problemas de acceso", "qué navegador debo usar",
-        "necesito recuperar mi acceso", "mi matrícula no es reconocida"
-      ],
-      "responses": [
-        "💻 **Acceso a la Plataforma**:\n\n**Pasos para ingresar**:\n1. Ve al portal oficial de Prepa en Línea SEP\n2. Ingresa tu **matrícula** como usuario\n3. Escribe tu **contraseña** proporcionada\n4. Haz clic en 'Entrar'\n\n**Soporte técnico**:\n📧 Email: soporte@prepaenlinea.sep.gob.mx\n\n¿Problemas de acceso? Contacta a soporte con tu matrícula.",
-        "🔑 **Para Acceder a la Plataforma**:\n\n• **URL**: Portal oficial de Prepa en Línea SEP\n• **Usuario**: Tu número de matrícula\n• **Contraseña**: La que te asignaron al inscribirte\n\n**Si tienes problemas**:\n• Verifica tu matrícula y contraseña\n• Contacta a: soporte@prepaenlinea.sep.gob.mx\n• Proporciona tu matrícula completa"
-      ],
-      "context": "platform"
-    },
-    {
-      "tag": "soporte_tecnico",
-      "patterns": [
-        "soporte técnico", "problemas con la plataforma", "no puedo entrar",
-        "error de acceso", "olvidé mi contraseña", "ayuda técnica",
-        "no me deja acceder", "problema técnico", "falla la plataforma"
-      ],
-      "responses": [
-        "🛠️ **Soporte Técnico**:\n\n• **Email**: soporte@prepaenlinea.sep.gob.mx\n• **Problemas comunes**: Acceso, navegación, entrega de actividades\n• **Informa**: Tu matrícula y descripción detallada del problema",
-        "📞 **Contacto Soporte**:\n\n**Email oficial**: soporte@prepaenlinea.sep.gob.mx\n\n**Incluye en tu mensaje**:\n• Tu matrícula completa\n• Descripción del problema\n• Pantallazos (si es posible)\n• Navegador que usas"
-      ],
-      "context": "platform"
-    },
-    {
-      "tag": "tecnicas_estudio_basicas",
-      "patterns": [
-        "quiero aprender a estudiar mejor", "técnicas para mejorar mi estudio",
-        "cómo puedo estudiar más eficiente", "métodos de aprendizaje rápido",
-        "consejos para ser buen estudiante", "cómo organizar mis estudios",
-        "estudio mucho pero no aprendo", "técnicas de memorización",
-        "cómo retener información mejor", "estrategias para aprender",
-        "qué hacer para concentrarme", "técnicas para no distraerme",
-        "cómo hacer que el estudio sea efectivo", "métodos para comprender mejor",
-        "quiero ser más productivo estudiando", "técnicas de concentración",
-        "cómo evitar procrastinar", "métodos para estudiar largas horas",
-        "cómo dividir mi tiempo de estudio", "técnicas para repasar"
-      ],
-      "responses": [
-        "📝 **Técnicas de Estudio Efectivas**:\n\n• 🍅 **Pomodoro**: 25min estudio + 5min descanso\n• 🧠 **Mapas mentales**: Organización visual\n• 📋 **Resúmenes**: Sintetizar información clave\n• ⏰ **Repaso espaciado**: Intervalos crecientes\n• 🎯 **Estudio activo**: Preguntas y aplicación\n\n¿Te interesa profundizar en alguna técnica específica?",
-        "🎓 **Métodos Comprobados**:\n\n1. **Estudio distribuido** (mejor que intensivo)\n2. **Práctica de recuperación** (sin ver apuntes)\n3. **Enseñar a otros** (método Feynman)\n4. **Conexiones con conocimiento previo**\n5. **Aplicación práctica inmediata**\n\n¡La ciencia respalda estas estrategias! 🔬"
-      ],
-      "context": "study_techniques"
-    },
-    {
-      "tag": "tecnicas_estudio_avanzadas",
-      "patterns": [
-        "técnicas de estudio avanzadas", "métodos de aprendizaje efectivo",
-        "cómo estudiar de manera eficiente", "estrategias de estudio comprobadas",
-        "técnicas para mejorar el aprendizaje", "cómo retener mejor la información",
-        "métodos de estudio científicos", "aprendizaje efectivo"
-      ],
-      "responses": [
-        "🧠 **Técnicas de Estudio Avanzadas**:\n\n• **🍅 Pomodoro**: 25min estudio + 5min descanso\n• **🎨 Mapas Mentales**: Organización visual de ideas\n• **📝 Feynman**: Explicar como si enseñaras\n• **🔄 Repaso Espaciado**: Intervalos crecientes\n• **🎯 Estudio Activo**: Preguntas y aplicación\n\n¿Te interesa profundizar en alguna técnica específica?",
-        "🚀 **Estrategias Comprobadas**:\n\n1. **Estudio Distribuido** vs. intensivo\n2. **Práctica de Recuperación** (sin ver apuntes)\n3. **Explicación a Otros** (método Feynman)\n4. **Conexiones con Conocimiento Previo**\n5. **Aplicación Práctica** inmediata\n\nLa ciencia del aprendizaje recomienda estas aproximaciones."
-      ],
-      "context": "study_advanced"
-    },
-    {
-      "tag": "tecnica_pomodoro",
-      "patterns": [
-        "técnica pomodoro", "pomodoro", "estudiar 25 minutos", "método pomodoro",
-        "cómo funciona pomodoro", "qué es pomodoro", "técnica del tomate"
-      ],
-      "responses": [
-        "🍅 **Técnica Pomodoro**:\n\n1. ⏰ Estudia 25 minutos concentrado\n2. ☕ Descansa 5 minutos\n3. 🔄 Repite 4 veces\n4. 🏖️ Toma descanso largo (15-30 min)\n\n**Beneficios**: Enfoca tu atención, evita el agotamiento y mejora la productividad.",
-        "⏲️ **Pomodoro Paso a Paso**:\n\n• Elige una tarea\n• Pon temporizador 25 min\n• Trabaja sin distracciones\n• Descansa 5 min\n• Después de 4 pomodoros, descansa 15-30 min\n\n¡Es ideal para mantener la concentración!"
-      ],
-      "context": "study_techniques"
-    },
-    {
-      "tag": "mapas_mentales",
-      "patterns": [
-        "mapas mentales", "cómo hacer mapas mentales", "organización visual",
-        "diagramas de ideas", "mapa conceptual", "organizar ideas visualmente"
-      ],
-      "responses": [
-        "🧠 **Mapas Mentales**:\n\n• **Centro**: Idea principal\n• **Ramas**: Conceptos relacionados\n• **Palabras clave**: Una por línea\n• **Colores**: Diferentes por categoría\n• **Imágenes**: Ayudan a la memoria\n\n**Ventaja**: Visualizas conexiones entre conceptos complejos.",
-        "🎨 **Crear Mapas Mentales**:\n\n1. Empieza con el concepto central\n2. Agrega ramas principales\n3. Desarrolla sub-ramas\n4. Usa colores e imágenes\n5. Manténlo simple y claro\n\n¡Perfecto para resumir temas extensos!"
-      ],
-      "context": "study_techniques"
-    },
-    {
-      "tag": "organizacion_tiempo",
-      "patterns": [
-        "cómo organizar mi tiempo", "horario de estudio", "gestión del tiempo",
-        "planificación semanal", "cuánto tiempo dedicar", "organización del tiempo",
-        "cómo planificar", "gestión del tiempo estudio"
-      ],
-      "responses": [
-        "⏳ **Organización del Tiempo**:\n\n• **Dedicación**: Mínimo 2 horas diarias\n• **Rutina**: Mismo horario cada día\n• **Planificación**: Domingo planifica tu semana\n• **Metas**: Objetivos específicos por sesión",
-        "📅 **Planificación Efectiva**:\n\n1. **Horario fijo**: 2 horas diarias mínimo\n2. **Agenda**: Digital o física\n3. **Metas SMART**: Específicas, medibles\n4. **Descansos**: Incluye pausas activas\n\n¡La consistencia beats la intensidad!"
-      ],
-      "context": "organization"
-    },
-    {
-      "tag": "foros_participacion",
-      "patterns": [
-        "cómo participar en foros", "foros de discusión", "qué escribir en foros",
-        "importancia de foros", "evaluación de foros", "participación en foros",
-        "cómo contribuir en foros"
-      ],
-      "responses": [
-        "💬 **Participación en Foros**:\n\n• **Frecuencia**: Participa regularmente\n• **Calidad**: Argumentos fundamentados\n• **Interacción**: Responde a compañeros\n• **Respeto**: Ambiente colaborativo\n\n**Valor**: 30% de tu calificación final.",
-        "🗣️ **Foros Académicos**:\n\n**Recomendaciones**:\n• Lee las instrucciones cuidadosamente\n• Fundamenta tus opiniones\n• Cita fuentes cuando sea necesario\n• Responde constructivamente\n• Mantén el respeto siempre\n\n¡Son espacios de aprendizaje colaborativo!"
-      ],
-      "context": "platform"
     }
   ]
 }

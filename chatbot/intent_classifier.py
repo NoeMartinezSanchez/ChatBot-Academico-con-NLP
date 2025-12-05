@@ -120,13 +120,17 @@ class IntentClassifier:
                 #min_df=2,
                 #max_df=0.8
 
-                max_features=200,  # Aumentar features
-                min_df=2,  # Reducir para captar más términos
-                max_df=0.8,
-                ngram_range=(1, 2),  # ¡IMPORTANTE! Incluir bigramas
+                max_features=300,  # Aumentar features
+                min_df=1,  # Reducir para captar más términos
+                max_df=0.7,
+                ngram_range=(1, 3),  # ¡IMPORTANTE! Incluir bigramas
                 analyzer='word',
                 token_pattern=r'\b\w+\b',
-                stop_words=stopwords.words('spanish')
+                stop_words=stopwords.words('spanish'),
+                sublinear_tf=True,          # Suaviza términos frecuentes
+                norm='l2',                  # Normalización L2
+                use_idf=True,               # Usar IDF
+                smooth_idf=True             # Suaviza IDF
 
             )
             

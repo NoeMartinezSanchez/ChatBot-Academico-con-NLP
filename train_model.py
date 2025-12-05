@@ -66,10 +66,10 @@ def main():
     print("\n🧪 Probando modelo con ejemplos...")
     test_examples = [
         "Hola, buen día",
-        "¿Qué es el módulo propedéutico?",
-        "Explícame la técnica pomodoro",
-        "Necesito ayuda con la plataforma",
-        "¿Cómo me evalúan?"
+        "Esto es todo",
+        "Cuanto necesito para pasar el curso?",
+        "Donde puedo ver mi calificacion?",
+        "Quiero aprender la prepa"
     ]
     
     for example in test_examples:
