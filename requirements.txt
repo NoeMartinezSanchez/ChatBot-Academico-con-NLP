@@ -1,16 +1,17 @@
 # Streamlit
 streamlit==1.28.0
 
-# Tu stack mínimo
+# Tu stack mínimo - VERSIONES COMPATIBLES CON PYTHON 3.13
 python-dotenv==1.0.0
 nltk==3.8.1
 spacy==3.7.2
 scikit-learn==1.3.0
-numpy==1.26.0 #version del sistema
-pandas==2.0.3
+numpy==1.26.4  # Última versión compatible con Python 3.13
+pandas==2.2.0  # Actualiza pandas también
 joblib==1.3.2
 requests==2.31.0
 
-# ¡IMPORTANTE! Quita las líneas problemáticas:
-# - La URL de spaCy
-# - matplotlib, seaborn, jupyter (no necesarios para deploy)
+# Añade estas para evitar problemas de compilación
+cython==3.0.12
+setuptools==70.0.0
+wheel==0.43.0
