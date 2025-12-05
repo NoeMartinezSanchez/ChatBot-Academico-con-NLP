@@ -1,12 +1,8 @@
-# requirements.txt - VERSIÓN 100% FUNCIONAL PARA RENDER
+# requirements_minimal.txt (renómbralo a requirements.txt)
 streamlit==1.28.0
 python-dotenv==1.0.0
 nltk==3.8.1
-# NOTA: spaCy comentado temporalmente para el deploy
-# spacy==3.7.2
-# scikit-learn con versión específica compatible
-scikit-learn==1.2.2
-numpy==1.24.3
+scikit-learn==1.0.2  # Versión MUY estable
+numpy==1.23.5
 pandas==1.5.3
 joblib==1.2.0
-requests==2.31.0
