@@ -1,17 +1,15 @@
 # Streamlit
 streamlit==1.28.0
 
-# Tu stack mínimo - VERSIONES COMPATIBLES CON PYTHON 3.13
+# Tu stack mínimo - SIN spaCy para evitar problemas
 python-dotenv==1.0.0
 nltk==3.8.1
-spacy==3.7.2
+# spacy==3.7.2  ¡QUITAR TEMPORALMENTE!
 scikit-learn==1.3.0
-numpy==1.26.4  # Última versión compatible con Python 3.13
-pandas==2.2.0  # Actualiza pandas también
+numpy==1.24.3  # Versión más estable
+pandas==2.0.3
 joblib==1.3.2
 requests==2.31.0
 
-# Añade estas para evitar problemas de compilación
-cython==3.0.12
-setuptools==70.0.0
-wheel==0.43.0
+# Alternativa ligera a spaCy para NLP básico
+textblob==0.18.0
