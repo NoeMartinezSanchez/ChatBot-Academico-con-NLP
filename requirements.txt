@@ -1,7 +1,10 @@
+# requirements.txt - VERSIÓN SEGURA PARA RENDER
 streamlit==1.28.0
 python-dotenv==1.0.0
 nltk==3.8.1
+# spaCy con dependencias explícitas
 spacy==3.7.2
+https://github.com/explosion/spacy-models/releases/download/es_core_news_sm-3.7.0/es_core_news_sm-3.7.0.tar.gz
 scikit-learn==1.3.0
 numpy==1.24.3
 pandas==2.0.3

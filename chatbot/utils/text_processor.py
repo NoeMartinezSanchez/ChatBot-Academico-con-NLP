@@ -27,23 +27,36 @@ class AdvancedTextProcessor:
         return logger
     
     def _load_nlp_models(self):
-        """Cargar modelos de NLP"""
+        """Cargar modelos de NLP - VERSIÓN CORREGIDA PARA RENDER"""
         try:
-            # Cargar modelo spaCy para español
+            # INTENTAR cargar modelo spaCy, pero continuar si falla
             self.nlp = spacy.load("es_core_news_sm")
             self.logger.info("✅ Modelo spaCy cargado correctamente")
         except OSError as e:
-            self.logger.error(f"❌ Error cargando spaCy: {e}")
+            self.logger.warning(f"⚠️ No se pudo cargar spaCy: {e}")
+            self.logger.info("⚠️ Usando procesamiento básico sin spaCy")
             self.nlp = None
-        
-        # Configurar NLTK
+        except Exception as e:
+            self.logger.warning(f"⚠️ Error inesperado con spaCy: {e}")
+            self.nlp = None
+    
+        # Configurar NLTK (esto SIEMPRE debe funcionar)
         try:
+            # Descargar recursos de NLTK si no están disponibles
+            try:
+                nltk.data.find('tokenizers/punkt')
+                nltk.data.find('corpora/stopwords')
+            except LookupError:
+                nltk.download('punkt', quiet=True)
+                nltk.download('stopwords', quiet=True)
+        
             self.stop_words_es = set(stopwords.words('spanish'))
             self.stemmer = SnowballStemmer('spanish')
-            self.lemmatizer = None  # Usaremos spaCy para lematización
+            self.lemmatizer = None
             self.logger.info("✅ NLTK configurado correctamente")
-        except LookupError as e:
-            self.logger.error(f"❌ Error configurando NLTK: {e}")
+        except Exception as e:
+            self.logger.error(f"❌ Error crítico con NLTK: {e}")
+            # Valores por defecto para que al menos funcione
             self.stop_words_es = set()
             self.stemmer = None
     
@@ -100,22 +113,24 @@ class AdvancedTextProcessor:
         return text
     
     def _advanced_preprocess(self, text: str) -> str:
-        """Preprocesamiento avanzado usando spaCy"""
+        """Preprocesamiento avanzado - VERSIÓN COMPATIBLE"""
         if not self.nlp:
+            # Fallback a NLTK si spaCy no está disponible
             return self._basic_preprocess(text)
-        
-        doc = self.nlp(text)
-        
-        # Filtrar tokens: solo palabras alfabéticas, no stopwords, no puntuación
-        tokens = [
-            token.lemma_.lower() for token in doc
-            if not token.is_stop 
-            and not token.is_punct 
-            and token.is_alpha
-            and len(token.lemma_) > 2  # Filtrar palabras muy cortas
-        ]
-        
-        return " ".join(tokens)
+    
+        try:
+            doc = self.nlp(text)
+            tokens = [
+                token.lemma_.lower() for token in doc
+                if not token.is_stop 
+                and not token.is_punct 
+                and token.is_alpha
+                and len(token.lemma_) > 2
+            ]
+            return " ".join(tokens)
+        except Exception:
+            # Si hay error con spaCy, usar básico
+            return self._basic_preprocess(text)
     
     def _ml_preprocess(self, text: str) -> str:
         """Preprocesamiento optimizado para ML"""
@@ -232,65 +247,49 @@ class AdvancedTextProcessor:
 
     
     def get_word_embeddings(self, text: str) -> np.ndarray:
-        """
-        Obtener embeddings de palabras usando spaCy
-        """
+        """Obtener embeddings - VERSIÓN SEGURA"""
         if not self.nlp:
-            return np.zeros(300)  # Vector cero si no hay modelo
+            return np.zeros(96)  # Dimensión reducida para ahorrar memoria
         
-        doc = self.nlp(text)
-        
-        # Promedio de embeddings de palabras relevantes
-        valid_tokens = [token for token in doc if token.has_vector and not token.is_stop]
-        
-        if valid_tokens:
-            embeddings = np.mean([token.vector for token in valid_tokens], axis=0)
-        else:
-            embeddings = np.zeros(300)  # Dimensión de embeddings de spaCy
-        
-        return embeddings
+        try:
+            doc = self.nlp(text)
+            valid_tokens = [token for token in doc if token.has_vector and not token.is_stop]
+            
+            if valid_tokens:
+                embeddings = np.mean([token.vector for token in valid_tokens], axis=0)
+            else:
+                embeddings = np.zeros(96)
+            
+            return embeddings
+        except Exception:
+            return np.zeros(96)
+
     
     def calculate_semantic_similarity(self, text1: str, text2: str) -> float:
-        """
-        Calcular similitud semántica usando múltiples métodos
-        """
+        """Calcular similitud - VERSIÓN SEGURA"""
         similarities = []
         
-        # 1. Similitud con embeddings de spaCy
+        # 1. Similitud con spaCy (si está disponible)
         if self.nlp:
-            doc1 = self.nlp(text1)
-            doc2 = self.nlp(text2)
-            spacy_similarity = doc1.similarity(doc2)
-            similarities.append(spacy_similarity)
+            try:
+                doc1 = self.nlp(text1)
+                doc2 = self.nlp(text2)
+                spacy_similarity = doc1.similarity(doc2)
+                similarities.append(spacy_similarity)
+            except Exception:
+                pass  # Ignorar si falla
         
-        # 2. Similitud TF-IDF
-        try:
-            if not self.is_tfidf_fitted:
-                # Usar textos como corpus temporal
-                self.tfidf_vectorizer.fit([text1, text2])
-                self.is_tfidf_fitted = True
-            
-            vectors = self.tfidf_vectorizer.transform([text1, text2])
-            tfidf_similarity = np.dot(vectors[0].toarray(), vectors[1].toarray().T)[0][0]
-            similarities.append(tfidf_similarity)
-        except Exception as e:
-            self.logger.warning(f"Error en similitud TF-IDF: {e}")
-        
-        # 3. Similitud por Jaccard (palabras comunes)
-        words1 = set(self._advanced_preprocess(text1).split())
-        words2 = set(self._advanced_preprocess(text2).split())
+        # 2. Similitud por Jaccard (siempre funciona)
+        words1 = set(self._basic_preprocess(text1).split())
+        words2 = set(self._basic_preprocess(text2).split())
         
         if words1 and words2:
             jaccard_similarity = len(words1.intersection(words2)) / len(words1.union(words2))
             similarities.append(jaccard_similarity)
         
-        # Promedio ponderado de similitudes
+        # Si no hay spaCy, usar solo Jaccard
         if similarities:
-            # Dar más peso a spaCy si está disponible
-            weights = [0.5 if i == 0 and self.nlp else 0.25 for i in range(len(similarities))]
-            total_weight = sum(weights)
-            weighted_similarities = [s * w for s, w in zip(similarities, weights)]
-            return sum(weighted_similarities) / total_weight
+            return sum(similarities) / len(similarities)
         else:
             return 0.0
     
