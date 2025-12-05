@@ -3300,3 +3300,28 @@
 2025-12-04 19:52:38,501 - ResponseGenerator - INFO - Respuesta generada - Intent: aceptacion_calificacion, Conf: 0.900, Método: enhanced_semantic
 2025-12-04 19:52:38,513 - app - INFO - Chat - User: 'con cuanto paso el modulo propedeutico?' -> Intent: aceptacion_calificacion (Conf: 0.900)
 2025-12-04 19:52:38,515 - werkzeug - INFO - 10.11.11.4 - - [04/Dec/2025 19:52:38] "POST /chat HTTP/1.1" 200 -
+2025-12-05 11:37:25,218 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.11.11.7:5000
+2025-12-05 11:37:25,219 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-12-05 11:37:25,282 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-12-05 11:37:46,106 - werkzeug - WARNING -  * Debugger is active!
+2025-12-05 11:37:46,140 - werkzeug - INFO -  * Debugger PIN: 671-478-127
+2025-12-05 11:37:46,664 - werkzeug - INFO - 10.11.11.7 - - [05/Dec/2025 11:37:46] "GET / HTTP/1.1" 200 -
+2025-12-05 11:37:47,252 - werkzeug - INFO - 10.11.11.7 - - [05/Dec/2025 11:37:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-12-05 11:38:12,997 - ResponseGenerator - INFO - Respuesta generada - Intent: saludo, Conf: 1.100, Método: enhanced_semantic
+2025-12-05 11:38:13,011 - app - INFO - Chat - User: 'buenas tardes' -> Intent: saludo (Conf: 1.100)
+2025-12-05 11:38:13,012 - werkzeug - INFO - 10.11.11.7 - - [05/Dec/2025 11:38:13] "POST /chat HTTP/1.1" 200 -
+2025-12-05 11:38:32,742 - ResponseGenerator - INFO - Respuesta generada - Intent: aceptacion_calificacion, Conf: 1.000, Método: enhanced_semantic
+2025-12-05 11:38:32,760 - app - INFO - Chat - User: 'cuanto necesito de calificacion para pasar el modulo propedeutico?' -> Intent: aceptacion_calificacion (Conf: 1.000)
+2025-12-05 11:38:32,771 - werkzeug - INFO - 10.11.11.7 - - [05/Dec/2025 11:38:32] "POST /chat HTTP/1.1" 200 -
+2025-12-05 11:38:45,363 - ResponseGenerator - INFO - Respuesta generada - Intent: consulta_calificacion_final, Conf: 0.600, Método: enhanced_semantic
+2025-12-05 11:38:45,376 - app - INFO - Chat - User: 'donde puedo revisar mi calificacion?' -> Intent: consulta_calificacion_final (Conf: 0.600)
+2025-12-05 11:38:45,378 - werkzeug - INFO - 10.11.11.7 - - [05/Dec/2025 11:38:45] "POST /chat HTTP/1.1" 200 -
+2025-12-05 11:39:03,751 - ResponseGenerator - INFO - Respuesta generada - Intent: modulo_info, Conf: 0.667, Método: enhanced_semantic
+2025-12-05 11:39:03,772 - app - INFO - Chat - User: 'Dame informacion del propedeutico' -> Intent: modulo_info (Conf: 0.667)
+2025-12-05 11:39:03,773 - werkzeug - INFO - 10.11.11.7 - - [05/Dec/2025 11:39:03] "POST /chat HTTP/1.1" 200 -
+2025-12-05 11:39:11,420 - ResponseGenerator - INFO - Respuesta generada - Intent: registro_inscripcion, Conf: 0.400, Método: enhanced_semantic
+2025-12-05 11:39:11,438 - app - INFO - Chat - User: 'quiero empezar la prepa' -> Intent: registro_inscripcion (Conf: 0.400)
+2025-12-05 11:39:11,439 - werkzeug - INFO - 10.11.11.7 - - [05/Dec/2025 11:39:11] "POST /chat HTTP/1.1" 200 -
