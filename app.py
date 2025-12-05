@@ -9,6 +9,16 @@ from chatbot.nl_engine import nl_engine
 from chatbot.intent_classifier import intent_classifier
 from chatbot.response_generator import ResponseGenerator
 
+
+import sys
+import io
+
+# Configurar stdout para UTF-8 (solo en Windows)
+if sys.platform == "win32":
+    if sys.stdout.encoding != 'UTF-8':
+        sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+
+
 # Configurar logging
 logging.basicConfig(
     level=logging.INFO,
@@ -31,7 +41,6 @@ try:
     
     available_intents = intents_data.get("intents", [])
 
-    # AGREGA ESTO:
     print(f"🔍 DEBUG: {len(available_intents)} intents cargados")
     for intent in available_intents:
         print(f"  - {intent['tag']}: {len(intent['patterns'])} patrones")
@@ -41,7 +50,34 @@ try:
     
     # Verificar estado de modelos NLP
     nlp_status = "✅ NLP Avanzado Activado" if Config.NLP["USE_ADVANCED_NLP"] else "⚠️ NLP Básico"
-    ml_status = "✅ ML Cargado" if intent_classifier.is_trained else "⚠️ ML No Entrenado"
+    
+    if intent_classifier.is_trained:
+        ml_status = "✅ ML Cargado"
+        print("   • ✅ ML: Modelos cargados automáticamente")
+    else:
+        ml_status = "⚠️ ML No Disponible"
+        print("   • ⚠️ ML: Modelos no cargados")
+        
+        # Diagnóstico adicional
+        import os
+        model_files = [
+            'models/intent_classifier.pkl',
+            'models/tfidf_vectorizer.pkl', 
+            'models/intent_mapping.json'
+        ]
+        
+        existing = [f for f in model_files if os.path.exists(f)]
+        
+        if existing:
+            print(f"   • 📁 Archivos encontrados: {len(existing)}/{len(model_files)}")
+            if len(existing) < len(model_files):
+                missing = [f for f in model_files if not os.path.exists(f)]
+                print(f"   • ❌ Faltan: {[os.path.basename(f) for f in missing]}")
+            print("   • 💡 Posible error de carga, revisa logs")
+        else:
+            print("   • 💡 Ejecuta: python train_model.py")
+
+
     
     print("🚀 ChatBot NLP Avanzado Inicializado")
     print(f"   • {nlp_status}")

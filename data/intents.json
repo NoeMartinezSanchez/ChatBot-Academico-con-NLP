@@ -3,9 +3,20 @@
     {
       "tag": "saludo",
       "patterns": [
-        "hola", "buenos días", "buenas tardes", "buenas noches",
-        "hi", "hey", "qué tal", "saludos", "cómo estás",
-        "hola buenas", "hey hola", "buen día", "saludos cordiales"
+        "hola buenas, tengo una duda",
+        "buen día, necesito ayuda con el módulo",
+        "hola, soy nuevo en el propedéutico",
+        "buenas, empiezo el módulo y tengo preguntas",
+        "hola asistente académico",
+        "holaaa", "buen día a todos", "hola buen día", 
+        "hey qué tal todo", "saludos buen día a todos",
+        "hola, buen día ¿cómo están?",
+        "hola, tengo una pregunta",
+        "buen día, me pueden ayudar",
+        "hola, necesito información",
+        "buenos días", "buenas tardes", "buenas noches",
+        "qué tal", "cómo estás", "saludos", "hola qué tal", 
+        "hola asistente", "hey necesito ayuda"
       ],
       "responses": [
         "¡Hola! 👋 Soy tu asistente especializado en el Módulo Propedéutico. ¿En qué puedo ayudarte hoy?",
@@ -18,7 +29,16 @@
       "tag": "despedida",
       "patterns": [
         "adiós", "hasta luego", "nos vemos", "chao", "bye",
-        "hasta pronto", "gracias por la ayuda", "me voy", "terminamos"
+        "hasta pronto", "hasta la próxima", "hasta mañana",
+        "hasta después", "nos vemos después",
+        "gracias por la ayuda, hasta luego",
+        "muchas gracias, adiós",
+        "gracias, nos vemos",
+        "te agradezco, hasta pronto",
+        "ya me voy", "me retiro", "me despido",
+        "hasta la vista", "bye bye", "chao chao",
+        "nos vemos al rato", "hasta luego compa",
+        "nada más", "eso sería todo"
       ],
       "responses": [
         "¡Hasta luego! 🚀 Recuerda que estoy aquí para ayudarte cuando lo necesites.",
@@ -27,6 +47,94 @@
       ],
       "context": "goodbye"
     },
+
+    {
+  "tag": "aceptacion_calificacion",
+  "patterns": [
+    "¿Qué calificación necesito para entrar al Módulo 1?",
+    "¿Con qué porcentaje apruebo el propedéutico?",
+    "¿Cuál es el promedio mínimo para ser seleccionado?",
+    "¿Si apruebo con 60% ya quedé como estudiante?",
+    "¿Con cuánto se aprueba el curso propedéutico?",
+    "¿Cuál es el puntaje de corte para el propedéutico?",
+    "¿Cuántos puntos necesito para quedar en Prepa en Línea?",
+    "¿Es suficiente tener 80% para ser aceptado?",
+    "¿Qué tan alta debe ser mi calificación para entrar?",
+    "¿A qué se refieren con que solo entran los de mejores promedios?",
+    "Cuanto necesito?",
+    "Con cuanto paso",
+    "Con cuanto apruebo?",
+    "Con cuanta calificacion apruebo?",
+    "Cuanto necesito para pasar?"
+  ],
+  "responses": [
+    "La calificación mínima necesaria para **aprobar** el Módulo Propedéutico es de **60%** (o 6.0) [1-7].",
+    "Sin embargo, el Módulo Propedéutico funciona como un examen de admisión, por lo que una cosa es aprobar y otra es ser seleccionado [2, 6, 8-10].",
+    "Debido a la alta demanda de aspirantes y el cupo limitado, Prepa en Línea SEP selecciona a los aspirantes con las **calificaciones más altas** para el Módulo 1 [3, 4, 6, 11-15].",
+    "Se recomienda que obtenga una calificación **arriba del 90%** (o 9.0) para asegurar un lugar, ya que se ha reportado que compañeros con calificaciones de 80% o menos no han sido aceptados en generaciones anteriores [9, 12, 13, 16-21].",
+    "En resumen, mientras más cerca esté del 100%, mayor probabilidad tendrá de ser aceptado [9, 14, 15, 18, 21, 22]."
+  ],
+  "context": "calificacion"
+},
+
+{
+  "tag": "consulta_calificacion_final",
+  "patterns": [
+    "dónde checo mi calificacion final",
+    "cómo sé si pasé el propedéutico",
+    "dónde veo mi porcentaje total",
+    "cuando sale la calificación final del propedéutico",
+    "donde se ve la calificacion",
+    "portafolio de evidencias donde esta",
+    "ya terminé el módulo cómo veo mi resultado",
+    "en qué parte sale el puntaje final",
+    "calificacion total del módulo",
+    "cómo descargo mi portafolio de evidencias",
+    "calificación total donde la encuentro",
+    "cuando te dan la calificacion final",
+    "dónde reviso si ya me calificaron todo",
+    "la calificación está hasta abajo del portafolio, verdad?",
+    "aún no me califican el foro y el proyecto",
+    "me falta que me califiquen actividades integradoras",
+    "no encuentro mi calificación final, ayudaaa"
+  ],
+  "responses": [
+    "Tu calificación final se consulta en el **Portafolio de Evidencias** [1-7].",
+    "Debes ir hasta la parte inferior del Portafolio de Evidencias, donde dice **'Total del módulo'** [2].",
+    "La calificación final se encuentra disponible generalmente el **martes o miércoles** después de que finaliza la cuarta semana (semana de cierre), ya que tu asesor tiene hasta 72 horas para calificar el Proyecto Integrador y el Foro de Integración [5, 6, 8-11].",
+    "Es muy importante que guardes o **descargues tu Portafolio de Evidencias completo** el jueves por la mañana, ya que después puede no estar disponible [6, 9].",
+    "Ten en cuenta que una cosa es el 'Avance' (la barra de porcentaje de la plataforma que muestra los recursos revisados) y otra es la calificación final en el Portafolio de Evidencias [12-14]."
+  ],
+  "context": "calificacion_final"
+},
+
+{
+  "tag": "registro_inscripcion",
+  "patterns": [
+    "cómo me inscribo a la prepa",
+    "alguien que me pueda orientar porfa para inscribirme",
+    "cómo me registro para la prepa en línea",
+    "dónde me explican cómo me inscribo",
+    "cuándo abren la convocatoria para la prepa",
+    "cómo puedo terminar mi prepa en línea",
+    "Me urje. Aprender la prepa",
+    "mandenme un número de teléfono por favor si me interesa la prepa",
+    "información sobre la inscripción para la prepa",
+    "como le puedo hacer para estudiar la prepa",
+    "cómo puedo ingresar para inscribirme",
+    "cuál es el link para empezar el propedéutico?",
+    "qué debo hacer para ser aspirante",
+    "ya pasó la convocatoria ahora hasta la G-57",
+    "que procede después de la convocatoria"
+  ],
+  "responses": [
+    "El primer paso es registrarse como **aspirante** durante el periodo de una convocatoria oficial [1]. Debes estar pendiente de las próximas fechas para la convocatoria, como la Generación 57 [2].",
+    "La inscripción formal (para ser alumno del Módulo 1) solo ocurre **después de aprobar el Módulo Propedéutico** [3, 4]. El propedéutico funciona como un examen de ingreso o de admisión [5-7].",
+    "Para registrarte, debes ir al portal oficial de Prepa en Línea SEP [2]. Es crucial asegurarse de poner bien tus datos [8].",
+    "Si ya pasó la convocatoria, debes esperar la siguiente [2, 9]. Revisa la convocatoria para ver el proceso paso a paso y las fechas de inicio del curso propedéutico [10, 11]."
+  ],
+  "context": "registro_proceso"
+},
     {
       "tag": "modulo_info",
       "patterns": [
@@ -58,11 +166,15 @@
     {
       "tag": "evaluacion",
       "patterns": [
-        "cómo son las evaluaciones", "sistema de evaluación", "criterios de evaluación", 
-        "cómo me evalúan", "qué necesito para aprobar", "calificación del módulo",
-        "porcentajes de evaluación", "cómo es el sistema de evaluacion", "cómo se evalúa",
-        "requisitos para aprobar", "qué calificación necesito", "cómo califican",
-        "eval", "calif", "nota", "aprob", "exam", "qué piden para pasar"
+        "cómo será la evaluación", "de qué manera evalúan", 
+        "cuáles son los criterios para aprobar", "qué porcentaje vale cada actividad",
+        "cómo califican las tareas", "qué necesito para pasar el módulo",
+        "hay examen final", "hay pruebas escritas", "cómo se asigna la calificación",
+        "qué pasa si repruebo", "puedo recuperar puntos", "hay segunda oportunidad",
+        "la evaluación es difícil", "cómo es el proceso de calificación",
+        "qué tanto vale cada parte", "cuántos puntos necesito",
+        "la nota mínima es ocho", "cómo funciona el sistema de puntos",
+        "hay evaluación continua", "cómo miden el aprendizaje"
       ],
       "responses": [
         "📊 **Sistema de Evaluación**:\n\n• **Foros (30%)**: Participación activa y calidad en discusiones\n• **Actividades (40%)**: Tareas prácticas y ejercicios\n• **Proyecto final (30%)**: Integración de todos los aprendizajes\n\n**Para aprobar necesitas**:\n✅ Calificación mínima: 8.0/10\n✅ 80% de participación en foros\n\n¡La constancia es clave para el éxito! 🎯",
@@ -73,12 +185,16 @@
     {
       "tag": "plataforma_acceso",
       "patterns": [
-        "cómo accedo a la plataforma", "cómo es el acceso a la plataforma", 
-        "entrar a la plataforma", "login plataforma", "acceso virtual",
-        "dónde ingreso", "cómo entrar al sistema", "acceder a la plataforma virtual",
-        "registro en plataforma", "tengo dudas sobre el registro", "cómo me registro",
-        "plat", "acceso", "entrar", "login", "registro", "ingresar",
-        "cómo inicio sesión", "dónde me registro"
+        "no puedo entrar a la plataforma", "me dice error al acceder",
+        "olvidé mi usuario y contraseña", "dónde consigo mis credenciales",
+        "la plataforma no me deja ingresar", "qué hago si no puedo acceder",
+        "problemas para iniciar sesión", "mi contraseña no funciona",
+        "dónde está el botón de entrar", "qué página debo visitar",
+        "la plataforma está caída", "no carga la página de acceso",
+        "me pide código de seguridad", "dónde encuentro el enlace",
+        "tengo problemas técnicos para entrar", "la plataforma me bloquea",
+        "dónde reporto problemas de acceso", "qué navegador debo usar",
+        "necesito recuperar mi acceso", "mi matrícula no es reconocida"
       ],
       "responses": [
         "💻 **Acceso a la Plataforma**:\n\n**Pasos para ingresar**:\n1. Ve al portal oficial de Prepa en Línea SEP\n2. Ingresa tu **matrícula** como usuario\n3. Escribe tu **contraseña** proporcionada\n4. Haz clic en 'Entrar'\n\n**Soporte técnico**:\n📧 Email: soporte@prepaenlinea.sep.gob.mx\n\n¿Problemas de acceso? Contacta a soporte con tu matrícula.",
@@ -102,10 +218,16 @@
     {
       "tag": "tecnicas_estudio_basicas",
       "patterns": [
-        "técnicas de estudio", "métodos de estudio", "cómo estudiar mejor", 
-        "consejos para estudiar", "aprender a aprender", "estudio efectivo",
-        "cómo estudiar eficazmente", "técnicas para estudiar",
-        "técnica", "estudio", "estudiar", "método", "aprender"
+        "quiero aprender a estudiar mejor", "técnicas para mejorar mi estudio",
+        "cómo puedo estudiar más eficiente", "métodos de aprendizaje rápido",
+        "consejos para ser buen estudiante", "cómo organizar mis estudios",
+        "estudio mucho pero no aprendo", "técnicas de memorización",
+        "cómo retener información mejor", "estrategias para aprender",
+        "qué hacer para concentrarme", "técnicas para no distraerme",
+        "cómo hacer que el estudio sea efectivo", "métodos para comprender mejor",
+        "quiero ser más productivo estudiando", "técnicas de concentración",
+        "cómo evitar procrastinar", "métodos para estudiar largas horas",
+        "cómo dividir mi tiempo de estudio", "técnicas para repasar"
       ],
       "responses": [
         "📝 **Técnicas de Estudio Efectivas**:\n\n• 🍅 **Pomodoro**: 25min estudio + 5min descanso\n• 🧠 **Mapas mentales**: Organización visual\n• 📋 **Resúmenes**: Sintetizar información clave\n• ⏰ **Repaso espaciado**: Intervalos crecientes\n• 🎯 **Estudio activo**: Preguntas y aplicación\n\n¿Te interesa profundizar en alguna técnica específica?",

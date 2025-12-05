@@ -11,6 +11,8 @@ import os
 import json
 from typing import Dict, List, Any, Tuple
 import logging
+import nltk
+from nltk.corpus import stopwords
 
 from config import Config
 
@@ -27,12 +29,42 @@ class IntentClassifier:
         self.vectorizer = None
         self.classifier = None
         self.is_trained = False
-        
+
         # Datos
         self.training_data = None
         self.intent_mapping = {}
+
+        # Se añade - Auto-carga de modelos
+        self._try_auto_load_models()
         
         self.logger.info("🤖 Clasificador de intenciones inicializado")
+
+    def _try_auto_load_models(self):
+        try:
+            # Usa paths directos en lugar de config (más seguro)
+            base_dir = os.path.join(os.path.dirname(__file__), '..', 'models')
+            paths = [
+                os.path.join(base_dir, 'intent_classifier.pkl'),
+                os.path.join(base_dir, 'tfidf_vectorizer.pkl'),
+                os.path.join(base_dir, 'intent_mapping.json')
+            ]
+
+            if all(os.path.exists(path) for path in paths):
+                # load_model ahora retorna True/False
+                success = self.load_model(base_dir)
+                if success:
+                    self.logger.info("✅ Modelos ML cargados automáticamente")
+                else:
+                    self.logger.warning("⚠️ Modelos encontrados pero error al cargar")
+            else:
+                # Solo mostrar una vez para evitar spam
+                if not hasattr(self, '_auto_load_logged'):
+                    missing = [p for p in paths if not os.path.exists(p)]
+                    if missing:
+                        self.logger.info("ℹ️ Faltan archivos de modelo")
+                    self._auto_load_logged = True
+        except Exception as e:
+            self.logger.error(f"❌ Error en auto-carga de modelos: {e}")
     
     def _setup_logger(self):
         logger = logging.getLogger('IntentClassifier')
@@ -81,11 +113,21 @@ class IntentClassifier:
             
             # Vectorizar textos
             self.vectorizer = TfidfVectorizer(
-                max_features=self.config.ML["TFIDF_MAX_FEATURES"],
-                stop_words='english',
-                ngram_range=(1, 2),
-                min_df=2,
-                max_df=0.8
+                
+                #max_features=self.config.ML["TFIDF_MAX_FEATURES"],
+                #stop_words='english',
+                #ngram_range=(1, 2),
+                #min_df=2,
+                #max_df=0.8
+
+                max_features=200,  # Aumentar features
+                min_df=2,  # Reducir para captar más términos
+                max_df=0.8,
+                ngram_range=(1, 2),  # ¡IMPORTANTE! Incluir bigramas
+                analyzer='word',
+                token_pattern=r'\b\w+\b',
+                stop_words=stopwords.words('spanish')
+
             )
             
             X_train_vec = self.vectorizer.fit_transform(X_train)
@@ -123,12 +165,12 @@ class IntentClassifier:
                 "feature_count": X_train_vec.shape[1]
             }
             
-            self.logger.info(f"✅ Modelo entrenado - Accuracy: {accuracy:.3f}")
+            self.logger.info(f"Modelo entrenado - Accuracy: {accuracy:.3f}")
             
             return results
             
         except Exception as e:
-            self.logger.error(f"❌ Error entrenando modelo: {e}")
+            self.logger.error(f"Error entrenando modelo: {e}")
             return {"error": str(e)}
     
     def predict_intent(self, text: str) -> Tuple[str, float]:
@@ -170,10 +212,10 @@ class IntentClassifier:
             with open(mapping_path, 'w', encoding='utf-8') as f:
                 json.dump(self.intent_mapping, f, ensure_ascii=False, indent=2)
             
-            self.logger.info(f"💾 Modelos guardados en: {model_dir}")
+            self.logger.info(f"Modelos guardados en: {model_dir}")
             
         except Exception as e:
-            self.logger.error(f"❌ Error guardando modelos: {e}")
+            self.logger.error(f"Error guardando modelos: {e}")
     
     def load_model(self, model_dir: str = None):
         """Cargar modelo entrenado"""
@@ -185,24 +227,35 @@ class IntentClassifier:
             vectorizer_path = os.path.join(model_dir, 'tfidf_vectorizer.pkl')
             if os.path.exists(vectorizer_path):
                 self.vectorizer = joblib.load(vectorizer_path)
+            else:
+                self.logger.error(f"Archivo no encontrado: {vectorizer_path}")
+                return False
             
             # Cargar clasificador
             classifier_path = os.path.join(model_dir, 'intent_classifier.pkl')
             if os.path.exists(classifier_path):
                 self.classifier = joblib.load(classifier_path)
+            else:
+                self.logger.error(f"Archivo no encontrado: {classifier_path}")
+                return False
             
             # Cargar mapeo
             mapping_path = os.path.join(model_dir, 'intent_mapping.json')
             if os.path.exists(mapping_path):
                 with open(mapping_path, 'r', encoding='utf-8') as f:
                     self.intent_mapping = json.load(f)
+            else:
+                self.logger.warning(f"Mapeo no encontrado: {mapping_path}")
+                self.intent_mapping = {}
             
             self.is_trained = True
-            self.logger.info("✅ Modelos cargados correctamente")
+            self.logger.info("Modelos cargados correctamente")
+            return True
             
         except Exception as e:
-            self.logger.error(f"❌ Error cargando modelos: {e}")
+            self.logger.error(f"Error cargando modelos: {e}")
             self.is_trained = False
+            return False
     
     def get_model_info(self) -> Dict[str, Any]:
         """Obtener información del modelo"""

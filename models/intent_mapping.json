@@ -1,5 +1,16 @@
 {
-  "modulo_info": 0,
-  "saludo": 1,
-  "tecnicas_estudio_avanzadas": 2
+  "aceptacion_calificacion": 0,
+  "despedida": 1,
+  "duracion_modulo": 2,
+  "evaluacion": 3,
+  "foros_participacion": 4,
+  "mapas_mentales": 5,
+  "modulo_info": 6,
+  "organizacion_tiempo": 7,
+  "plataforma_acceso": 8,
+  "saludo": 9,
+  "soporte_tecnico": 10,
+  "tecnica_pomodoro": 11,
+  "tecnicas_estudio_avanzadas": 12,
+  "tecnicas_estudio_basicas": 13
 }
