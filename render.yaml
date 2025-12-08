@@ -2,11 +2,9 @@ services:
   - type: web
     name: chatbot-educativo
     env: python
-    buildCommand: |
-      pip install --upgrade pip
-      pip install -r requirements.txt
-      python -c "import nltk; nltk.download('punkt'); nltk.download('stopwords')"
+    buildCommand: pip install -r requirements.txt && python -c "import nltk; nltk.download('punkt'); nltk.download('stopwords')"
     startCommand: streamlit run chatbot_app.py --server.port $PORT --server.headless true
     envVars:
       - key: PYTHON_VERSION
         value: 3.10.14
+    autoDeploy: true
