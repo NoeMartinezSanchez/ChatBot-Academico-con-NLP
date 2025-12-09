@@ -5,11 +5,12 @@ nltk==3.8.1
 
 # INSTALA NUMPY PRIMERO
 #numpy==1.23.5 
-numpy==1.24.3
+#numpy==1.24.3
 
 # LUEGO scikit-learn
-scikit-learn==1.3.0  # Versión compatible
+#scikit-learn==1.3.0  # Versión compatible
 #scikit-learn==1.0.2 si funciono
+
 # Otras dependencias
 pandas==1.5.3
 joblib==1.3.2
