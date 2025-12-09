@@ -1,17 +1,8 @@
-# requirements.txt - VERSIÓN GARANTIZADA
+# requirements_wheels.txt
 streamlit==1.28.0
 python-dotenv==1.0.0
 nltk==3.8.1
-
-# INSTALA NUMPY PRIMERO
-#numpy==1.23.5 
-#numpy==1.24.3
-
-# LUEGO scikit-learn
-#scikit-learn==1.3.0  # Versión compatible
-#scikit-learn==1.0.2 si funciono
-
-# Otras dependencias
+# Usa wheels precompilados específicos
+https://files.pythonhosted.org/packages/cp310/n/numpy/numpy-1.24.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+https://files.pythonhosted.org/packages/py3/s/scikit_learn/scikit_learn-1.3.0-py3-none-any.whl
 pandas==1.5.3
-joblib==1.3.2
-requests==2.31.0
