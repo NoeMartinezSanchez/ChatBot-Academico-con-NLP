@@ -4,7 +4,8 @@ python-dotenv==1.0.0
 nltk==3.8.1
 
 # INSTALA NUMPY PRIMERO
-numpy==1.23.5
+#numpy==1.23.5 
+numpy==1.26.4
 
 # LUEGO scikit-learn
 scikit-learn==1.0.2  # Versión compatible
@@ -13,3 +14,6 @@ scikit-learn==1.0.2  # Versión compatible
 pandas==1.5.3
 joblib==1.2.0
 requests==2.31.0
+
+# Añade setuptools actualizado
+setuptools==70.0.0
