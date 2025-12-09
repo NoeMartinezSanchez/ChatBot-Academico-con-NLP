@@ -1,17 +1,13 @@
-# requirements.txt - VERSIÓN GARANTIZADA PARA RENDER
+# requirements.txt - VERSIÓN ULTRA COMPATIBLE
 streamlit==1.28.0
 python-dotenv==1.0.0
 nltk==3.8.1
 
-# Bibliotecas ML con versiones compatibles
-scikit-learn==1.2.2
-numpy==1.24.3
+# Dependencias ML con versiones MÁS ANTIGUAS
+# scikit-learn==1.0.2  # ¡VERSIÓN CRÍTICA! Compatible con Python 3.13
+numpy==1.23.5
 pandas==1.5.3
 joblib==1.2.0
 
-# Otras dependencias
+# Otras
 requests==2.31.0
-
-# NOTA: spaCy comentado temporalmente para evitar problemas
-# spacy==3.7.2
-# Si necesitas spaCy, añádelo después de que funcione el deploy
