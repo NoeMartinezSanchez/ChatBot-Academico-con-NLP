@@ -1,4 +1,4 @@
-# requirements_docker.txt
+# requirements.txt - CON spaCy
 streamlit==1.28.0
 python-dotenv==1.0.0
 nltk==3.8.1
@@ -7,3 +7,7 @@ scikit-learn==1.3.0
 pandas==1.5.3
 joblib==1.3.2
 requests==2.31.0
+
+# Añade spaCy y su modelo en español
+spacy==3.7.2
+https://github.com/explosion/spacy-models/releases/download/es_core_news_sm-3.7.0/es_core_news_sm-3.7.0-py3-none-any.whl
