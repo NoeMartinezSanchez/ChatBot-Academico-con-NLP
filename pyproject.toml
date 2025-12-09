@@ -1,6 +1,10 @@
 [build-system]
-requires = [
-    "setuptools>=70.0.0",
-    "wheel"
-]
+requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+zip-safe = false
+
+# Deshabilita mesonpy para numpy y scikit-learn
+[tool.mesonpy]
+backend = "setuptools"
