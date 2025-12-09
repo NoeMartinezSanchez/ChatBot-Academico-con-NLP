@@ -1,0 +1,30 @@
+# .dockerignore
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Git
+.git/
+.gitignore
+
+# Datos grandes (opcional, si quieres mantenerlos comenta estas líneas)
+# data/
+# models/
+
+# Logs
+*.log

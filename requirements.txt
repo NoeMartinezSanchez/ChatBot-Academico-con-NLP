@@ -1,7 +1,8 @@
+# requirements_docker.txt
 streamlit==1.28.0
 python-dotenv==1.0.0
 nltk==3.8.1
-numpy==1.26.4  # o simplemente numpy>=1.24.4
+numpy==1.24.3
 scikit-learn==1.3.0
 pandas==1.5.3
 joblib==1.3.2
